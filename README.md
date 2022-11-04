@@ -1,1 +1,9 @@
 # NLP-Automatic-Twitter-Event-Summarization-Ukraine-War
+
+The volume and velocity of the content generated on Twitter necessitates a rigorous manual filtration process and extensive reading effort to understand events and public sentiment. Thus, we propose to leverage NER, topic modeling, clustering, and sentiment analysis in a primarily unsupervised summarization task of Twitter data to achieve the following objectives:
+1)	Retrieve the most important information, and
+2)	Generate a robust event summary. 
+
+In the first part of this study, we implemented NER using spaCy to identify major players in the war in Ukraine. Topic modeling with Non-negative Matrix Factorization (NMF) and BERTopic illustrates topics pertaining to sub-events within the corpus of tweets. Clustering using network graph analysis and transformers partitions tweets into categories of similar aspects of the war. Sentiment analysis with VADER Sentiment Analyzer and Textblob tracks fluctuation in public emotional response to new developments. 
+
+In the second part of our project, traditional extractive and abstractive summarization techniques are supplemented by the information about important sub-events that we gain from the first part. Extractive summaries are generated using Gensim, spaCy, and SUMY which implement TextRank and Latent Semantic Analysis summarization algorithms. The abstractive text summarization of tweets data is generated using a pre-trained T5 model and BART (Bidirectional and Auto-Regressive Transformer). We evaluate our summarization system’s performance with similarity metrics (i.e., cosine similarity) and ROUGE-1 scores. By leveraging methods to determine main sub-events to inform our text summarization techniques, we hope to create a tool to paint a complete picture of the Ukraine-Russia war through the eyes of the public. 
